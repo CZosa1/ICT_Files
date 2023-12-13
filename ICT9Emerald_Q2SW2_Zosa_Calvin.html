@@ -119,8 +119,7 @@
 
             @keyframes loop {
                 0% {background-position: 0px 0px;}
-                50% {background-position: 1920px 0px;}
-                100% {background-position: 0px 0px;}
+                100% {background-position: 1920px 0px;}
             }
 
             .footer:hover {
@@ -130,9 +129,7 @@
             }
 
             .footer:active {
-                background-size: 1920px 100%;
-                background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red);
-                animation: loop 2.5s ease-in-out infinite;
+                animation: loop 2.5s linear infinite;
                 cursor: grabbing;
             }
         </style>
