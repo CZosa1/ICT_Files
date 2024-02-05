@@ -4,8 +4,10 @@
 }
 
 body {
-    background-image: url();
-    animation: move 5s infinite linear;
+    background-image: url(gd-background.jpg);
+    background-size: auto 100%;
+    animation: move 60s infinite linear;
+    padding: 20px 0;
 }
 
 * {
@@ -13,11 +15,21 @@ body {
 }
 
 .center {
+    color: #fff;
     text-align: center;
+    vertical-align: middle;
 }
 
 .bold {
     font-weight: bold;
+}
+
+.counter {
+    color: #777;
+}
+
+img {
+    width: 25%;
 }
 
 th, td {
@@ -30,17 +42,4 @@ th {
 
 a {
     text-decoration: none !important;
-}
-
-/* counters wow */
-
-table {
-    counter-reset: number;
-}
-
-.counter::before {
-    content: '#' counter(number);
-    color: #777;
-    font-family: 'Rubik', sans-serif;
-    counter-increment: number;
 }
