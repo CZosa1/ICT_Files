@@ -1,3 +1,13 @@
+@keyframes move {
+    from {background-position-x: 0;}
+    to {background-position-x: 100vw;}
+}
+
+body {
+    background-image: url();
+    animation: move 5s infinite linear;
+}
+
 * {
     font-family: 'Rubik', sans-serif !important;
 }
