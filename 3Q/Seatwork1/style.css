@@ -40,7 +40,7 @@ table {
 
 .counter::before {
     content: '#' counter(number);
+    color: #777;
     font-family: 'Rubik', sans-serif;
     counter-increment: number;
-    text-decoration: underline;
 }
