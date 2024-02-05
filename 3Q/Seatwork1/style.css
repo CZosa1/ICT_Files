@@ -5,7 +5,7 @@
 
 body {
     background-image: url(gd-background.jpg);
-    background-size: auto 100%;
+    background-size: auto max(100%, 100vh);
     animation: move 60s infinite linear;
     padding: 20px 0;
 }
@@ -29,7 +29,12 @@ body {
 }
 
 img {
-    width: 25%;
+    width: 20%;
+    transition: 150ms;
+}
+
+tr:hover img {
+    width: 23%;
 }
 
 th, td {
