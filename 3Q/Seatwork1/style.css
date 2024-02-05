@@ -1,0 +1,35 @@
+* {
+    font-family: 'Rubik', sans-serif !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+th, td {
+    text-align: center !important;
+}
+
+th {
+    font-size: x-large !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* counters wow */
+
+table {
+    counter-reset: number;
+}
+
+.counter::before {
+    content: '#' counter(number);
+    counter-increment: number;
+    text-decoration: underline;
+}
