@@ -1,5 +1,10 @@
+* {
+    font-family: 'Rubik', sans-serif;
+    font-size: xx-large;
+}
+
 body {
-    background-image: linear-gradient(90deg, #000, #0000, #000);
+    background-image: linear-gradient(90deg, #0007, #0000, #0007);
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -7,11 +12,33 @@ body {
     align-items: center;
 }
 
-* {
-    font-family: 'Rubik', sans-serif;
-    font-size: xx-large;
-}
-
 a {
     text-decoration: none !important;
+}
+
+.content > li > ul {
+    display: none;
+}
+
+.content > li > button {
+    border: none;
+    outline: none;
+    background-color: #0000;
+}
+
+.content > li {
+    list-style-type: disc;
+}
+
+.content > li:focus-within {
+    list-style-type: circle;
+}
+
+.content > li:focus-within > ul {
+    display: block;
+}
+
+.content > li > ul {
+    list-style: none;
+    list-style-position: outside;
 }
