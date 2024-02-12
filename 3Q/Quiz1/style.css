@@ -23,6 +23,10 @@ a {
     text-decoration: none !important;
 }
 
+img {
+    width: 40% !important;
+}
+
 .table {
     opacity: 0.8;
     overflow: hidden;
