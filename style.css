@@ -16,6 +16,14 @@ a {
     text-decoration: none !important;
 }
 
+body > p {
+    position: absolute;
+    font-size: small;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0;
+}
+
 .content > li > ul {
     display: none;
 }
