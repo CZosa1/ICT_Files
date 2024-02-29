@@ -1,0 +1,35 @@
+nav {
+    display: flex;
+    gap: 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bottom-nav {
+    position: fixed;
+    top: 100vh;
+    transform: translateY(-100%);
+    width: 100%;
+}
+
+.space {
+    width: 12px;
+}
+
+.vertical-ruler {
+    display: inline-block;
+    background-color: var(--bs-body-color);
+    width: 1px;
+    height: 2em;
+}
+
+.no-underline {
+    text-decoration: none;
+    border: 0 solid #5f6a77;
+    transition: 100ms;
+}
+
+.no-underline:hover {
+    color: #5f6a77 !important;
+    border-width: 2px 0 2px 0;
+}

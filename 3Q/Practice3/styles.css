@@ -1,0 +1,12 @@
+body {
+    background-color: aliceblue;
+}
+
+input {
+    text-overflow: ellipsis;
+}
+
+.container {
+    background-color: aquamarine;
+    padding: 5px;
+}
