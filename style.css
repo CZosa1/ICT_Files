@@ -29,8 +29,6 @@ body > p {
 }
 
 .content > li > button {
-    border: none;
-    outline: none;
     background-color: #0000;
 }
 
