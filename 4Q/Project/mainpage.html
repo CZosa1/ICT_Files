@@ -221,7 +221,7 @@
                         localStorage.setItem('commentDebounce', Date.now() + 300000); // Set the comment debounce to 5 minutes from now
                         // 5 minutes * 60 seconds * 1,000 milliseconds = 300,000 milliseconds
                     } else {
-                        $('#comment-status').text('Status: HTTP ' + response.status); // Tell the user the status number
+                        $('#comment-status').text('Status: HTTP ' + response.status + ' | ' + response.statusText); // Tell the user the status
                     }
                 }).catch(error => {
                     $('#comment-status').text('Status: Error - ' + error.toString()); // Tell the user what error happened
