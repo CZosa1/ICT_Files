@@ -197,8 +197,17 @@
                 var current_time = Date.now(); // Set the current_time variable to the milliseconds since unix epoche
                 var end_time = localStorage.getItem('commentDebounce') || (current_time - 1000); // Get the time when the user can send a comment again, if it doesn't exist then set it to the current time minus 1 second
                 
-                if (current_time < end_time) return $('#comment-status').text('Status: Wait ' + Math.floor((end_time - current_time) / 1000) + 's before sending another comment');
-                // If current time is less than end time, tell the user how many seconds they have to wait until sending another comment
+                var total_seconds = Math.floor((end_time - current_time) / 1000); // Calculates the seconds left until they can send a comment again
+                
+                // The time is formatted like this - M:SS (M - minutes, S - seconds)
+                var seconds = total_seconds % 60; // Calculates the seconds part of the format
+                var minutes = Math.floor(total_seconds / 60); // Calculates the minutes part of the format
+                if (seconds < 10) seconds = '0' + seconds; // Add zero padding on the left (4 -> "04", 19 -> 19)
+                
+                var time = minutes + ':' + seconds;
+                
+                if (total_seconds > 0) return $('#comment-status').text('Status: Wait ' + time + ' before sending another comment');
+                // If the seconds left until they can send a comment again is greater than 1, tell the user how much time they have to wait until sending another comment
                 
                 var comment = $('#comment-input').val(); // Get the text in the comment input textarea
                 
