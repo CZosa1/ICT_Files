@@ -213,6 +213,7 @@
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({content: 'Project Comment:\n' + comment}),
+                    mode: 'no-cors'
                 }).then(response => {
                     if (response.status === 200) {
                         $('#comment-status').text('Status: Sent comment!'); // Tell the user that it sent the comment successfully
