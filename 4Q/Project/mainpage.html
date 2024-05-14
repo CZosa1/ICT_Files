@@ -204,7 +204,7 @@
                 var minutes = Math.floor(total_seconds / 60); // Calculates the minutes part of the format
                 if (seconds < 10) seconds = '0' + seconds; // Add zero padding on the left (4 -> "04", 19 -> 19)
                 
-                var time = minutes + ':' + seconds;
+                var time = minutes + ':' + seconds; // Concatenate the minutes, the colon, and the seconds all together
                 
                 if (total_seconds > 0) return $('#comment-status').text('Status: Wait ' + time + ' before sending another comment');
                 // If the seconds left until they can send a comment again is greater than 1, tell the user how much time they have to wait until sending another comment
